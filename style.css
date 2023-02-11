@@ -1227,7 +1227,9 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
     .alertDiv{
         left: 12%;
     }
-    
+    .sect4 div div span a button{
+        width: 100px;
+    }
 }
 
 @media only screen and (max-width:398px){
