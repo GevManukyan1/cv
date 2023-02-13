@@ -28,6 +28,8 @@ function btnDisplay(){
     }, 2000);
     setTimeout(() => {
         alertDivP.innerHTML = "Welcome to Gevorg's CV site"
+        alertDivH1.style.animation = "none"
+        alertDivH1.style.borderRight = "none"
     }, 4100);
     setTimeout(() => {
         alertDivH1.innerHTML = "Hello!"
