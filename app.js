@@ -23,12 +23,15 @@ function btnDisplay(){
     setTimeout(() => {
         alertDiv.style.opacity = 1
         alertDiv.style.boxShadow = "0 0 20px white"
-        alertDivH1.innerHTML = "Hello!"
-        alertDivP.innerHTML = "Welcome to Gevorg's CV site"
         alertDivDiv.style.opacity = 1
         alertDivx.style.opacity = 1
-        
     }, 2000);
+    setTimeout(() => {
+        alertDivP.innerHTML = "Welcome to Gevorg's CV site"
+    }, 4100);
+    setTimeout(() => {
+        alertDivH1.innerHTML = "Hello!"
+    }, 3100);
     alertDivx.addEventListener("click",function(){
         alertDiv.style.marginTop = "-700px"
        
