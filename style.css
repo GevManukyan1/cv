@@ -11,7 +11,7 @@ body{
     background-position: center;
     background-size: 50%;
     background-attachment: fixed;
-    
+  
 }
 
 @font-face {
@@ -172,7 +172,7 @@ nav ul li{
     justify-content: space-between;
     height: 80%;
     width: 100%;
-    margin-top: 70px;
+    margin-top: 30px;
 }
 
 /*alertDiv  */
@@ -181,9 +181,9 @@ nav ul li{
     height: 250px;
     background-color: #0a0a30;
     position: fixed;
-    left: 35%;
-    transform: rotate(8deg)  rotateX(180deg)  translate(-50% , -50%);
+    left: 50%;
     top: 50%;
+    transform: rotate(8deg)  rotateX(180deg)  ;
     color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
@@ -195,25 +195,40 @@ nav ul li{
     animation: alert 5s 1 cubic-bezier(0,.42,.21,1.19) ,shake1 3s infinite 3s    ease  ;
     opacity: 0;
     transition: 1s;
-    z-index: 1000;
+    z-index: 10000;
+
+}
+#x{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #0a0a30;
+    color: white;
+    top: -10px;
+    right: -10px;
+    z-index: 10000;
+    opacity: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    
 }
 .alertDiv div h1{
     
   color: #fff;
-  overflow: hidden; 
-  border-right: .15em solid orange; 
-  white-space: nowrap; 
-  margin: 0 auto; 
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   animation: 
     typing .5s steps(40, end) 3s,
     blink-caret .7s step-end infinite;
 }
 .alertDiv div p{
     color: #fff;
-    overflow: hidden; 
-    border-right: .15em solid orange; 
-    white-space: nowrap; 
-    margin: 0 auto; 
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     animation: 
       typingp 2s steps(30, end) 4s,
       blink-caret .7s step-end infinite;
@@ -232,20 +247,6 @@ nav ul li{
     from, to { border-color: transparent }
     50% { border-color: rgb(255, 255, 255) }
   }
-#x{
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: #0a0a30;
-    color: white;
-    top: -10px;
-    right: -10px;
-    z-index: 10000;
-    opacity: 0;
-    border-radius: 50%;
-    cursor: pointer;
-    
-}
 #x:hover{
     box-shadow: 0 0 20px white;
     transition: .5s;
@@ -260,27 +261,28 @@ nav ul li{
 }
 @keyframes alert{
      100%{
-        top: 250px;transform: rotate(0deg) ;
+        top: 50%;transform: rotate(0deg) translateX(-50%) translateY(-50%);
     }
     20%{
-        top: 480px; transform: rotateX(130deg) rotate(-13deg);
+        top: 60%; transform: rotateX(130deg) rotate(-13deg) translateX(-50%) translateY(-50%);
     }
 
     70%{
-        top: 250px; transform: rotateX(0deg) rotate(0deg) ;opacity: 1;
+        top: 50%; transform: rotateX(0deg) rotate(0deg) translateX(-50%) translateY(-50%);opacity: 1;
     }
 }
 @keyframes shake1{
     25%{
-        top:240px;
-        transform: rotate(-2deg);
+        top:50%;
+        transform: rotate(-2deg) translateX(-50%) translateY(-50%);
+        
     }
 
     75%{
-        transform: rotate(5deg);
+        transform: rotate(5deg) translateX(-50%) translateY(-40%);
     }
     0%,100%{
-        top: 250px;transform: rotate(0);
+        top: 50%;transform: rotate(0) translateX(-50%) translateY(-50%);
     }
 }
 nav ul li a{
@@ -1059,7 +1061,6 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
     }
 }
 
-/* media */
 @media screen and (min-width:1800px) {
     header{
         margin-bottom: -280px;
@@ -1067,10 +1068,7 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
     .sect1{
         font-size: 18px;
     }
-    .alertDiv{
-        top: 1000px;
-        left: 40%;
-    }
+
     .headerDiv img{
         margin-top: 50px;
     }
@@ -1120,9 +1118,7 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
     .sect3 div{
         width: 90%;
     }
-    .alertDiv{
-        left: 20%;
-    }
+  
     .headerDiv img{
         width: 200px;
         height: 200px;
@@ -1226,16 +1222,14 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
         width: 300px;
         gap: 20px;
     }
-    .alertDiv{
-        width: 350px;
-        left: 25%;
-    }
+
     .alertDiv h1{
         font-size: 40px;
     }
     .alertDiv p{
         font-size: 20px;
     }
+
 }
 
 @media only screen and (max-width:518px){
@@ -1275,6 +1269,10 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
     .sect1 div p{
         width: 100%;
         font-size: 14px;
+        padding: 0 10px 10px 10px;
+    }
+    .sect1 div h1{
+        padding-top: 0px;
     }
     .headerDiv div{
         height: 200px;
@@ -1287,14 +1285,16 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
         width: 200px;
     }
     .alertDiv{
-        left: 12%;
+        width: 300px;
+        height: 200px;
+        
     }
     .sect4 div div span a button{
         width: 100px;
     }
 }
 
-@media only screen and (max-width:398px){
+@media only screen and (max-width:400px){
     .sect1 {
        height: 1100px;
     }
@@ -1326,11 +1326,7 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
     .sect4{
         clip-path: polygon(0% 5%, 100% 0%, 100% 120%, 0% 100%);
     }
-    .alertDiv{
-        width: 280px;
-        height: 150px;
-        left: 8%;
-    }
+    
     .alertDiv h1{
         font-size: 30px;
     }
@@ -1339,4 +1335,13 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
         text-align: center;
     }
 
+}
+
+@media (max-width:334px){
+    .sect1{
+        height: 1150px;
+    }
+    #sect3h1 h1{
+        padding-top: 50px;
+    }
 }
