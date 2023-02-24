@@ -573,7 +573,7 @@ nav ul li:hover{
 
 .sect2{
     width: 100%;
-    height: 900px;
+    height: 1100px;
     background-color:#0a0a30 ;
     clip-path: polygon(100% 20%,
     100% 90%,
@@ -586,7 +586,7 @@ nav ul li:hover{
     justify-content: center;
 }
 .sect2 h1{
-    margin-top: -200px;
+    margin-top: -300px;
     font-size: 40px;
     
 }
@@ -594,7 +594,7 @@ nav ul li:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 300px;
+    height: 400px;
     justify-content: flex-start;
    
 }
@@ -611,7 +611,7 @@ meter::-webkit-meter-optimum-value {
     background: #003cff;
   }
 meter::-moz-meter-bar { /* Firefox Pseudo Class */
-    background: red;
+    background: #003cff;
   }
 
 .html{
@@ -636,6 +636,21 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
 .css div{
     position: absolute;
     left: 460px;
+    width: 50px;
+    height: 50px;
+    background-color:#003cff ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    top: 15px;
+}
+.scss{
+    position: relative;
+}
+.scss div{
+    position: absolute;
+    left: 440px;
     width: 50px;
     height: 50px;
     background-color:#003cff ;
@@ -676,12 +691,12 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
     top: 15px;
 }
 
-.react{
+.react , .git , .github{
     position: relative;
 }
-.react div{
+.react div , .git div , .github div{
     position: absolute;
-    left: 230px;
+    left: 370px;
     width: 50px;
     height: 50px;
     background-color:#003cff ;
@@ -944,7 +959,7 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
     height: 300px;
 }
 .proj8{
-    background-image: url(racing.png);
+    background-image: url(tiktacktoe.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1171,7 +1186,7 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
         
     }
     .sect2 h1{
-        margin-top: -250px;
+        margin-top: -350px;
     }
     .sect4 div div{
         width: 90%;
@@ -1251,8 +1266,11 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
     .js div{
         left: 240px;
     }
-    .react div{
-        left: 140px;
+    .react div , .git div , .github div{
+        left: 220px;
+    }
+    .scss div{
+        left: 240px;
     }
     .am div{
         left: 250px;
