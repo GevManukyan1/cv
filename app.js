@@ -33,9 +33,10 @@ function btnDisplay(){
     }, 4100);
     setTimeout(() => {
         alertDivH1.innerHTML = "Hello!"
+
     }, 3100);
     alertDivx.addEventListener("click",function(){
-        alertDiv.style.marginTop = "-700px"
+        alertDiv.style.marginTop = "-1000px"
        
         setTimeout(() => {
             alertDiv.style.display = "none"
@@ -57,21 +58,7 @@ function proj(){
             elem.style.opacity = 0 
         })
     }
-    for (let i = 0; i < projects.length; i++) {
-        let elem = projects[i];
-        elem.style.opacity = 0
-        
-        elem.addEventListener("mouseover",function(){
-            projectsChild[i].style.opacity = 1
-            elem.style.zIndex = "1" 
-            elem.style.transform = "rotate(0deg)"
-        })
-        elem.addEventListener("mouseout",function(){
-            projectsChild[i].style.opacity = 0
-            elem.style.zIndex = "0"
-            elem.style.transform = "rotate(15deg)"
-        })
-    }
+   
 }
 function projFunc(){
     if(location.reload){
