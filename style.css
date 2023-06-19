@@ -138,6 +138,7 @@ nav ul li{
 .burger:hover{
     cursor: pointer;
 }
+
 .mediaNav{
     background-color: #0a0a30;
     position: fixed;
@@ -149,22 +150,18 @@ nav ul li{
     display: none;
     padding: 100px 40px 60px 40px;
     overflow-y: auto;
-    margin-right: -600px;
-    transition:all 2s ;
+    transform: translate(105%);
+    transition:all .5s ;
     opacity: 1;
 }
 
 .mediaNavflex{
     
     display: flex;
-    animation: margin  1s forwards;
+    transform: translate(0);
     
 }
-@keyframes margin{
-    to{
-        margin-right: 0;
-    }
-}
+
 .mediaNav ul{
     display: flex;
     align-items: center;
@@ -887,6 +884,7 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
     transition: all 2s,z-index 0s;
     display: flex;
 }
+
 .sect4 div div span  button:hover{
     animation: shake 2s infinite;
 }
@@ -1221,11 +1219,12 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
         display: block;
     }
     header{
-        height: 400px;
+        height: 410px;
         clip-path: polygon(0% 0%,
         100% 0%,
         200% 100%,
          0% 80%);
+         padding: 0 10px;
     }
     .headerDiv img{
         margin-top: 50px;
