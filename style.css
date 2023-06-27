@@ -174,8 +174,8 @@ nav ul li{
 
 /*alertDiv  */
 .alertDiv{
-    width: 450px;
-    height: 250px;
+    width: 800px;
+    height: 500px;
     background-color: #0a0a30;
     position: fixed;
     left: 50%;
@@ -186,7 +186,7 @@ nav ul li{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-size: 30px;
+    font-size: 50px;
     border: 2px solid white;
     border-radius: 10px;
     animation: alert 5s 1 cubic-bezier(0,.42,.21,1.19) ,shake1 3s infinite 3s    ease  ;
@@ -564,6 +564,7 @@ nav ul li:hover{
     width: 50%;
     min-width: 700px;
     margin-top: 20px;
+    padding-top: 20px;
 }
 
 /* section2 */
@@ -776,7 +777,7 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
     justify-content: space-between;
     height: 800px;
     margin-top: 20px;
-    
+    padding: 10px;
 }
 #sect3h1 h1{
     font-size: 50px;
@@ -839,9 +840,11 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
      color: white;
      flex-direction: column;
      padding-bottom: 150px;
+     gap: 5vw;
+     border-bottom: 5px solid white;
 }
 .sect4 div{
-   
+    gap: 5vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -899,9 +902,9 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 600px;
-    height: 300px;
-    margin-top: 100px;
+    width: 30vw;
+    height: 15vw;
+   
     
   
 }
@@ -910,17 +913,17 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 600px;
-    height: 300px;
-    margin-top: 100px;
+    width: 30vw;
+    height: 15vw;
+    
 }
 .proj3{
     background-image: url(project3.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 600px;
-    height: 300px;
+    width: 30vw;
+    height: 15vw;
 
 }
 .proj4{
@@ -928,24 +931,24 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 600px;
-    height: 300px;
+    width: 30vw;
+    height: 15vw;
 }
 .proj5{
     background-image: url(project5.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 600px;
-    height: 300px;
+    width: 30vw;
+    height: 15vw;
 }
 .proj6{
     background-image: url(project6.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 600px;
-    height: 300px;
+    width: 30vw;
+    height: 15vw;
 
 }
 .proj7{
@@ -953,67 +956,18 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 600px;
-    height: 300px;
+    width: 30vw;
+    height: 15vw;
 }
 .proj8{
     background-image: url(tiktacktoe.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 600px;
-    height: 300px;
+    width: 30vw;
+    height: 15vw;
 
 }
-/* section5 */
-.sect5{
-    width: 100%;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-}
-.sect5 h1{
-    font-size: 50px;
-    color: #0a0a30;
-}
-.gallery {
-    display: flex;
-    width: 80%;
-    height: 400px;
-  }
-  
-  .gallery img {
-    min-width: 0;
-    flex: 1 1 10px;
-    object-fit: cover;
-    opacity: 1;
-    transition: 0.5s;
-  }
-  
-  .gallery img:hover {
-    flex: 1 1 280px;
-    opacity: 1;
-  }
-  .gallery1{
-    display: none;
-    width: 80%;
-    height: 400px;
-  }
-  .gallery1 img {
-    min-width: 0;
-    flex: 1 1 10px;
-    object-fit: cover;
-    opacity: 1;
-    transition: 0.5s;
-  }
-  
-  .gallery1 img:hover {
-    flex: 1 1 280px;
-    opacity: 1;
-  } 
 
 
 /* section6 */
@@ -1098,7 +1052,11 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
     .sect4 div{
        justify-content: space-evenly;
     }
-
+    .alertDiv{
+        width: 450px;
+        height: 250px;
+        font-size: 30px;
+    }
 }
 @media only screen and (max-width:985px) {
     .sect4 div h1{
@@ -1360,5 +1318,36 @@ meter::-moz-meter-bar { /* Firefox Pseudo Class */
     }
     #sect3h1 h1{
         padding-top: 50px;
+    }
+    .sect2 div div meter{
+        width: 250px;
+    }
+    .html div , .css div,.am div{
+        left: 200px;
+    }
+    .en div, .ru div {
+        left:100px
+    }
+    .scss div, .js div {
+        left: 190px;
+    }
+    .boot div{
+        left: 160px;
+    }
+    .react div, .git div, .github div{
+        left: 180px;
+    }
+}
+
+
+@media (max-width:325px){
+    .sect6 div {
+        width:200px;
+        padding: 5px;
+    }
+    .sect6 div a {
+    
+        width: 40px;
+        height: 40px;
     }
 }
